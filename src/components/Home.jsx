@@ -2,10 +2,10 @@ import React from 'react';
 import { useGlobalContext } from '../context';
 
 const Home = () => {
-  const { id, name } = useGlobalContext();
+  const { openModal } = useGlobalContext();
   return (
     <section className='home'>
-      <button>Open Modal</button>
+      <button onClick={openModal}>Open Modal</button>
     </section>
   );
 };

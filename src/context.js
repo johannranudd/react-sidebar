@@ -1,10 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
-    <AppContext.Provider value={{ id: Date.now(), name: 'blalbal' }}>
+    <AppContext.Provider value={{ openModal, modalIsOpen, closeModal }}>
       {children}
     </AppContext.Provider>
   );
