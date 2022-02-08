@@ -13,7 +13,6 @@ const Modal = () => {
             </button>
             <h3>Modal</h3>
           </div>
-          ;
         </div>
       )}
     </>
